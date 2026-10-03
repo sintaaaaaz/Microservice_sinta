@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+LABEL maintainer="sintaua20@gmail.com"
+RUN apt-get update
+
+RUN apt-get install -y vim
+WORKDIR /home/coba
+
+RUN echo "Hello, dari contaier kelima saya!" > /home/coba/hello.txt
+
+COPY folder4 /home/coba/
+CMD ["echo", "Hello, dari container kelima saya!"]

@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+LABEL maintainer="sintaua20@gmail.com"
+RUN apt-get update
+
+RUN apt-get install -y vim
+WORKDIR /home/coba
+
+RUN echo "Hello, dari contaier keempat saya!" > /home/coba/hello.txt
+CMD ["echo", "Hello, dari contaier keempat saya!"]
